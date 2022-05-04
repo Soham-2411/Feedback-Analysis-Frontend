@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'displaydetails.dart';
 import 'package:flutter_json_view/flutter_json_view.dart';
+import 'package:file_picker/file_picker.dart';
 
 Future<String> getString(String path) async {
   return await rootBundle.loadString(path);
@@ -24,12 +27,28 @@ class MyHomePage extends StatefulWidget {
 }
 
 bool isClicked = false;
+String filePicked = '';
 
 class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     isClicked = false;
     print("done");
+  }
+
+  void _filePicked() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      withData: true,
+      allowedExtensions: ['txt', 'xlsx', 'docx', 'pdf', 'csv'],
+      type: FileType.custom,
+      allowMultiple: true,
+    );
+    if (result != null) {
+      File file = File(result.files.single.path.toString());
+      setState(() {
+        filePicked = file.path;
+      });
+    }
   }
 
   void clearEmptyFields(Map cluster) {
@@ -122,11 +141,16 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: EdgeInsets.all(50),
             child: Column(
               children: [
-                const Text(
+                Text(
                   "Get your feedback analysed",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                SizedBox(height: 100),
+                SizedBox(height: 50),
+                Text(
+                  "Use our pre-made database",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                SizedBox(height: 20),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.black,
@@ -179,7 +203,83 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                )
+                ),
+                SizedBox(height: 20),
+                Text(
+                  "OR",
+                  style: TextStyle(color: Colors.white, fontSize: 25),
+                ),
+                SizedBox(height: 20),
+                Text(
+                  "Upload your own set of data",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.black,
+                      elevation: 10,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)))),
+                  onPressed: () async {
+                    setState(() {
+                      isClicked = true;
+                    });
+                    _filePicked();
+                    setState(() {
+                      isClicked = false;
+                    });
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: ListTile(
+                      leading: Text(
+                        "Upload",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      trailing: Icon(
+                        Icons.upload,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  (filePicked == '') ? " " : filePicked,
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      primary: Colors.black,
+                      elevation: 10,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)))),
+                  onPressed: () {
+                    setState(() {
+                      isClicked = true;
+                    });
+                    _getAnalysedFeedback('assets/set0.txt');
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: ListTile(
+                      leading: Text(
+                        "Continue",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      trailing: Icon(
+                        Icons.arrow_right_alt,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

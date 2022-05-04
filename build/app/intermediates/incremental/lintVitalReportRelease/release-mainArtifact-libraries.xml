@@ -4,6 +4,32 @@
       jars="/home/soham/flutter_projects/testapp/build/app/intermediates/flutter/release/libs.jar"
       resolved="__local_aars__:/home/soham/flutter_projects/testapp/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
+      name="/home/soham/flutter_projects/testapp/android@@:flutter_plugin_android_lifecycle::release"
+      jars="/home/soham/flutter_projects/testapp/build/flutter_plugin_android_lifecycle/.transforms/8b0da1a38d44f9782b5dfadc6f8e6343/transformed/out/jars/classes.jar"
+      resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
+      folder="/home/soham/flutter_projects/testapp/build/flutter_plugin_android_lifecycle/.transforms/8b0da1a38d44f9782b5dfadc6f8e6343/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="/home/soham/flutter_projects/testapp/android@@:file_picker::release"
+      jars="/home/soham/flutter_projects/testapp/build/file_picker/.transforms/b671f560c2d2fd3899f734fc4bf76d54/transformed/out/jars/classes.jar"
+      resolved="com.mr.flutter.plugin.filepicker:file_picker:unspecified"
+      folder="/home/soham/flutter_projects/testapp/build/file_picker/.transforms/b671f560c2d2fd3899f734fc4bf76d54/transformed/out"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="io.flutter:flutter_embedding_release:1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24@jar"
       jars="/home/soham/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_release/1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24/c41c897070f88143de7543393151fe3b1be244e2/flutter_embedding_release-1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24.jar"
       resolved="io.flutter:flutter_embedding_release:1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24"/>
@@ -61,18 +87,6 @@
       name="io.flutter:x86_64_release:1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24@jar"
       jars="/home/soham/.gradle/caches/modules-2/files-2.1/io.flutter/x86_64_release/1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24/2328d2953164d56d0e93c37d7f2f251cc7378cd8/x86_64_release-1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24.jar"
       resolved="io.flutter:x86_64_release:1.0.0-6e9953c743365c676289e605dda4e1ddcdf07f24"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
-      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.10/b8af3fe6f1ca88526914929add63cf5e7c5049af/kotlin-stdlib-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.6.10"/>
-  <library
-      name="org.jetbrains:annotations:13.0@jar"
-      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
-      resolved="org.jetbrains:annotations:13.0"/>
-  <library
-      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
-      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.10/c118700e3a33c8a0d9adc920e9dec0831171925/kotlin-stdlib-common-1.6.10.jar"
-      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.2.0@jar"
       jars="/home/soham/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar"
@@ -288,4 +302,16 @@
       symbolFile="R.txt"
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib:1.6.10@jar"
+      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.10/b8af3fe6f1ca88526914929add63cf5e7c5049af/kotlin-stdlib-1.6.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib:1.6.10"/>
+  <library
+      name="org.jetbrains:annotations:13.0@jar"
+      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar"
+      resolved="org.jetbrains:annotations:13.0"/>
+  <library
+      name="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10@jar"
+      jars="/home/soham/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.10/c118700e3a33c8a0d9adc920e9dec0831171925/kotlin-stdlib-common-1.6.10.jar"
+      resolved="org.jetbrains.kotlin:kotlin-stdlib-common:1.6.10"/>
 </libraries>

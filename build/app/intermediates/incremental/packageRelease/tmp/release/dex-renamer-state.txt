@@ -1,4 +1,4 @@
-#Tue May 03 22:30:42 IST 2022
+#Wed May 04 11:44:46 IST 2022
 base.0=/home/soham/flutter_projects/testapp/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
